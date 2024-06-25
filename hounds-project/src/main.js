@@ -2,7 +2,6 @@ import { fetchSingularJoke, fetchTenJokes, fetchJokesByType, fetchRandomDog } fr
 import { renderSingularJoke, renderTenJokes, renderJokesByType, renderDog } from './renderFunctions.js';
 
 const main = async () => {
-  
   const dog = await fetchRandomDog();
   if (dog) renderDog(dog);
 
