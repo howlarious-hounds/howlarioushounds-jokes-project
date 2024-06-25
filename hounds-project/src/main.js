@@ -1,8 +1,5 @@
-import { fetchTenJokes, fetchRandomDog, fetchJokesByType } from './fetchFunctions.js';
-import { renderTenJokes, renderDog, renderJokesByType } from './renderFunctions.js';
-
-import { fetchSingularJoke } from './fetchFunctions.js';
-import { renderSingularJoke } from './renderFunctions.js';
+import { fetchSingularJoke, fetchTenJokes, fetchJokesByType, fetchRandomDog } from './fetchFunctions.js';
+import { renderSingularJoke, renderTenJokes, renderJokesByType, renderDog } from './renderFunctions.js';
 
 const main = async () => {
   document.getElementById('fetch-dog').addEventListener('click', async () => {
@@ -21,8 +18,6 @@ const main = async () => {
     const jokeOption = formData.get('joke-option');
     const jokeTypeOption = formData.get('joke-type-option');
 
-   
-
     if (jokeOption === 'better') {
       const joke = await fetchSingularJoke();
       renderSingularJoke(joke);
@@ -37,9 +32,26 @@ const main = async () => {
         console.warn('No jokes were fetched.');
       }
     }
-    form.reset();
+  });
+
+  const jokeOptions = document.querySelectorAll('input[name="joke-option"]');
+  const jokeTypeOptions = document.querySelectorAll('input[name="joke-type-option"]');
+
+  function toggleJokeTypeOptions(disable) {
+    jokeTypeOptions.forEach(option => {
+      option.disabled = disable;
+    });
+  }
+
+  jokeOptions.forEach(option => {
+    option.addEventListener('change', function () {
+      if (this.value === 'type') {
+        toggleJokeTypeOptions(false);
+      } else {
+        toggleJokeTypeOptions(true);
+      }
+    });
   });
 };
-
 
 document.addEventListener('DOMContentLoaded', main);
