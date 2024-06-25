@@ -5,6 +5,9 @@ export const fetchSingularJoke = async () => {
 
     if (!response.ok) throw new Error('Network response was not ok');
 
+
+    if (!response.ok) throw new Error('Network response was not ok');
+
     return await response.json();
   }
   catch (error) { 
@@ -35,6 +38,7 @@ export const fetchJokesByType = async (type) => {
     console.warn(`Fetch jokes by type ${type} failed:`, error);
   }
 }
+
 
 //fetching dog data
 export  const fetchRandomDog = async () => {
