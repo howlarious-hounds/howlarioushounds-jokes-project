@@ -7,8 +7,8 @@ export const fetchSingularJoke = async () => {
 
     return await response.json();
   }
-  catch {
-    console.warn('Fetching singular joke failed:', error);
+  catch (error) { 
+    console.warn('Fetching singular joke failed:', error); 
   }
 }
 

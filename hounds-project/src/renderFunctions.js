@@ -2,13 +2,9 @@
 export const renderSingularJoke = (joke) => {
   const jokeSetup = document.getElementById('starter-joke-setup');
   jokeSetup.textContent = joke.setup;
-  console.log(joke); // gives a whole Promise 
-  // console.log(joke.setup); 
-  // console.log("joke setup:", jokeSetup);
 
-  // const jokePunchline = document.getElementById('starter-joke-punchline');
-  // jokePunchline.textContent = joke.punchline;
-  // console.log("joke punchline:", jokePunchline);
+  const jokePunchline = document.getElementById('starter-joke-punchline');
+  jokePunchline.textContent = joke.punchline;
 }
 
 //rendering random dog
