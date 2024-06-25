@@ -1,6 +1,5 @@
 // rendering singular joke
 export const renderSingularJoke = (joke) => {
-
   const jokeContainer = document.querySelector('.starter-joke article');
   jokeContainer.innerHTML = '';
 
@@ -16,9 +15,7 @@ export const renderSingularJoke = (joke) => {
   jokeContainer.appendChild(jokePunchline);
 }
 
-
-//rendering multiple jokes
-
+// rendering multiple jokes
 export const renderTenJokes = (jokes) => {
   const jokeContainer = document.getElementById('joke-container');
 
@@ -35,8 +32,6 @@ export const renderTenJokes = (jokes) => {
   });
 }
 
-
-
 export const renderJokesByType = (jokes) => {
   const jokeContainer = document.getElementById('joke-container');
   jokeContainer.innerHTML = '';
@@ -50,16 +45,9 @@ export const renderJokesByType = (jokes) => {
     jokePunchline.textContent = joke.punchline;
     jokeContainer.appendChild(jokePunchline);
   });
-
-  const jokeSetup = document.getElementById('starter-joke-setup');
-  jokeSetup.textContent = joke.setup;
-
-  const jokePunchline = document.getElementById('starter-joke-punchline');
-  jokePunchline.textContent = joke.punchline;
-
 }
 
-//rendering random dog
+// rendering random dog
 export const renderDog = (dog) => {
   const dogPicElement = document.getElementById('dog-pic');
   dogPicElement.src = dog.message;
