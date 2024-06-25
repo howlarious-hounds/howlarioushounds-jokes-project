@@ -4,7 +4,6 @@ import { renderDog } from './renderFunctions.js';
 import { fetchSingularJoke } from './fetchFunctions.js';
 import { renderSingularJoke } from './renderFunctions.js';
 
-
 const main = () => {
   document.getElementById('fetch-dog').addEventListener('click', async () => {
     const dog = await fetchRandomDog();
