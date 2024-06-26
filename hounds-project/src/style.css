@@ -17,7 +17,9 @@ h1 {
   color: navajowhite;
 }
 
-section {
+main {
+/* section { */
+/* .starter-joke, #joke-form, .dog-section { */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,14 +35,23 @@ section {
   margin-bottom: 50px;
 }
 
+/* 
+Attempting: hovering over joke setup -> reveal joke punchline 
+https://www.w3schools.com/howto/howto_css_display_element_hover.asp 
+*/
+.hide {
+  display: none;
+}
+
+#joke-container:hover + .hide {
+  display: block;
+  color: red;
+}
+
 #starter-joke-setup, #starter-joke-punchline {
   background-color:#0C2697;
   color: navajowhite;
 }
-
-/* #fieldset {
-  background-color: #0C2697;
-} */
 
 button {
   margin-top: 10px;
@@ -60,7 +71,7 @@ button:hover {
   border-color: navajowhite;
 }
 
-#dog-section-heading, #dog-section-description {
+fieldset, #dog-section-heading, #dog-section-description {
   background-color:#0C2697;
   color: navajowhite;
 }
@@ -85,7 +96,9 @@ button:hover {
 }
 
 footer {
-  margin: 0;
+  width: 100%;
+  padding: 2px 1px 2px 10px;
+  /* margin-bottom: 0px; */
   background-color: gray;
   color: white;
 }
