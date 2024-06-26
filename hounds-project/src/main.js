@@ -12,6 +12,16 @@ const main = async () => {
 
   const joke = await fetchSingularJoke();
   renderSingularJoke(joke);
+  // if (joke) {
+  //   renderSingularJoke(joke);
+  //   /* 
+  //   Attempting: hovering over joke setup -> reveal joke punchline 
+  //   https://www.w3schools.com/jsref/event_onmouseover.asp 
+  //   */
+
+  //   // listen for a mouseover or clicking event? 
+  // }
+  
 
   document.getElementById('joke-form').addEventListener('submit', async (event) => {
     event.preventDefault();

@@ -26,6 +26,7 @@ main {
 }
 
 #joke-container {
+  height: fit-content;
   width: fit-content;
   background-color: #0C2697;
   border-width: 100px;
@@ -35,18 +36,24 @@ main {
   margin-bottom: 50px;
 }
 
+li {
+  list-style-type: none;
+  background-color: #0C2697;
+}
+
 /* 
 Attempting: hovering over joke setup -> reveal joke punchline 
 https://www.w3schools.com/howto/howto_css_display_element_hover.asp 
+https://www.w3schools.com/jsref/event_onmouseover.asp 
 */
-.hide {
+/* .hide {
   display: none;
 }
 
 #joke-container:hover + .hide {
   display: block;
   color: red;
-}
+} */
 
 #starter-joke-setup, #starter-joke-punchline {
   background-color:#0C2697;
